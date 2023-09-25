@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #abc{
+           height: 300px;
+           width: 1200px;
+            background-image: url(galaxy.jpeg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #abcc{
+            border:solid greenyellow;
+            margin-left: 40%;
+            margin-right: 20%;
+            margin-top: 25%;    
+            background-color: white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+           
+        }
+        #two{
+        color: red;
+        display: flexbox;
+        }
+       
+    </style>
+</head>
+<body id="abc">
+    
+   <div>
+    <div id="abcc">
+        <form onsubmit="palindrome()">
+        <span >Enter The Sentance / word</span>
+        <input type="text"  id="text" required>
+       <span>*</span><br>
+        <input type="submit">
+        </form>
+        <h5 id="two"></h5>
+    </div></div>
+
+    <script >
+        function palindrome()
+{
+   var pali= document.getElementById("text").value;
+   var REVERSED = pali.split('').reverse().join("");
+
+if (pali==REVERSED)
+{
+    document.getElementById("two").innerHTML="string is palindrome"
+}
+else{
+    document.getElementById("two").innerHTML="string is not a palindrome"
+}
+}
+    </script>
+
+</body>
+</html>
